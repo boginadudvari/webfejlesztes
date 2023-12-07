@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nádudvari Boglárka">
+    <meta name="copyright" content="Oktatási cél">
+    <meta name="description" content="Egy kitalált hotel weboldala">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/x-icon" href="style/kepek/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <script src="script/reszp_galeria/jquery-3.7.1.min.js"></script>
+    <script src="script/reszp_galeria/galleria-1.6.1/dist/galleria.js"></script>
+    <script src="script/reszp_galeria/galleria-1.6.1/dist/themes/classic/galleria.classic.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#images').galleria(
+                width = 500,
+                height = 500
+            );
+        });
+    </script>
+    <style>
+        .galleria {
+            margin: auto;
+            width: 80vw;
+            height: 50vw;
+        }
+    </style>
+
+    <title>NádHotel-Galéria</title>
+</head>
+<body>
+    <header><img src="style/kepek/logo.png" alt="NádHotel logója" id="logo"></header>
+    <nav>
+        <ul>
+            <li class="menu"><a href="rolunk.html" id="rolunk">Rólunk</a></li>
+            <li class="menu"><a href="#" id="aktiv">Galéria</a></li>
+            <li class="menu"><a href="szobak.html" id="szobak">Szobák</a></li>
+            <li class="menu"><a href="elmenyek.html" id="elmenyek">Élmények</a></li>
+            <li class="menu"><a href="kapcsolat.html" id="kapcsolat">Kapcsolat</a></li>
+        </ul>
+    </nav>
+    <article id="images" class="galleria">
+        <img src="script/reszp_galeria/fr/hortobagy.jpg" alt="A Hortobágy egyik legnagyobb látványossága a kilenclyukú híd" title="Hortobágy" class="galeria_kep">
+        <img src="script/reszp_galeria/fr/nadudvar.jpg" alt="Nádudvar környezete tökéletes sétákra, kikapcsolódásra" title="Nádudvar" class="galeria_kep">
+        <img src="script/reszp_galeria/fr/csarda.jpg" alt="A túra során ellátogathat a Hídi csárdába" title="Hídi csárda" class="galeria_kep">
+        <img src="script/reszp_galeria/fr/hotel_kep.jpeg" alt="Hotelunk a felújítás után" title="NádHotel" class="galeria_kep">
+        <img src="script/reszp_galeria/fr/csaladi_szoba.png" alt="Csalási szobánknan elfér akár 6 fő is" title="Szoba" class="galeria_kep">
+        <img src="script/reszp_galeria/fr/kondi.jpg" alt="Újabb és újabb technológiával készülünk fitness termeinkbe" title="Fitness" class="galeria_kep">
+        <img src="script/reszp_galeria/fr/spa.jpg" alt="Wellness részlegünkbe garantált a pihenés és a kikapcsolódás" title="Wellness" class="galeria_kep">
+        <img src="script/reszp_galeria/fr/standard_hotel.png" alt="Standard szobáink is megfelelő kényelmet nyújtanak" title="Szoba" class="galeria_kep">
+        <img src="script/reszp_galeria/fr/szoba_terasszal.png" alt="Premium szobáink kilátása igazán egyedi" title="Szoba" class="galeria_kep">
+        <img src="script/reszp_galeria/fr/wellness.jpg" alt="Wellness részlegünkbe garantált a pihenés és a kikapcsolódás" title="Wellness" class="galeria_kep">
+    </article>
+    <footer>
+        <p>Elérhetőségeink: <br>Telefon: +36 30 196 8086 <br>Email: nadhotel@gmail.com</p>
+        <p><img src="style/kepek/social_media.png" alt="Social media logók" id="social"></p>
+    </footer>
+</body>
+</html>

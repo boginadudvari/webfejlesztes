@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nádudvari Boglárka">
+    <meta name="copyright" content="Oktatási cél">
+    <meta name="description" content="Egy kitalált hotel weboldala">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/x-icon" href="style/kepek/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <script src="script/reszp_galeria/jquery-3.7.1.min.js"></script>
+    <script src="script/reszp_galeria/galleria-1.6.1/dist/themes/classic/galleria.classic.min.js"></script>
+    <script src="script/validation/dist/jquery.validate.min.js"></script>
+    <script src="script/script.js"></script>
+    <title>NádHotel-Kapcsolat</title>
+    <script>
+        $(document).ready(function(){
+        $("#myform").validate({
+            rules: {
+                keresztnev: "required",
+                vezeteknev: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                erkezes: "required",
+                tavozas: "required",
+            },
+
+            messages: {
+                keresztnev: " Írd be a keresztneved!",
+                vezeteknev: " Írd be a vezetékneved!",
+                email: " Kérlek valós email címet adj meg!",
+                erkezes: "Kérlek add meg az érkezésed időpontját!",
+                tavozas: "Kérlek add meg az távozásod időpontját!",
+                },
+
+        });
+        });
+    </script>
+</head>
+<body>
+    <header><img src="style/kepek/logo.png" alt="NádHotel logója" id="logo"></header>
+    <nav>
+        <ul>
+            <li class="menu"><a href="rolunk.html" id="rolunk">Rólunk</a></li>
+            <li class="menu"><a href="galeria.html" id="galeria">Galéria</a></li>
+            <li class="menu"><a href="szobak.html" id="szobak">Szobák</a></li>
+            <li class="menu"><a href="elmenyek.html" id="elmenyek">Élmények</a></li>
+            <li class="menu"><a href="#" id="aktiv">Kapcsolat</a></li>
+        </ul>
+    </nav>
+    <div id="hatter2">
+        <div id="hely_eler">
+            <article id="elhelyezkedes" class="kapcsolat">
+                <h2>Elhelyezkedés</h2>
+                <img src="style/kepek/terkep_hely.jpg" alt="Elhelyezkedés a térképen" id="terkep" class="kep">
+            </article>
+            <article id="elerhetoseg" class="kapcsolat">
+                <h2>Elérhetőségeink</h2>
+                <p>Telefon: +36 30 196 8086</p>
+                <p>Email: nadhotel@gmail.com</p>
+            </article>
+        </div>
+        <article id="foglalas" class="kapcsolat">
+            <h2>Foglaljon online!</h2>
+            <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php" id="myform" novalidate>
+                <label for="vezeteknev">Vezetéknév: <br><input type="text" id="vezeteknev" name="vezeteknev" size="20"></label>
+                <label for="keresztnev">Keresztnév: <br><input type="text" id="keresztnev" name="keresztnev" size="20"></label>
+                <label for="email">Email: <br><input type="text" id="email" name="email" size="20"></label>
+                <label for="telefonszam">Telefonszám: <br><input type="text" id="telefonszam" name="telszam" size="20" value="+36"></label>
+                <label for="erkezes">Érkezés: <br><input type="date" name="erkezes" id="erkezes"></label>
+                <label for="tavozas">Távozás: <br><input type="date" name="tavozas" id="tavozas"></label>
+                <label for="felnottszam">
+                    Felnőttek száma:<br>
+                    <select name="felnott" id="felnottszam" size="1">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </label>
+                <label class="gyerekszam">
+                    Gyerekek száma:<br>
+                    <select name="gyerek" id="gyerekszam" size="1">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </label>
+                Milyen szolgáltatásokat kíván igénybe venni?<br>
+                <input type="checkbox" id="reggeli" name="reggeli" value="i" checked><label for="reggeli">Reggeli</label>
+                <input type="checkbox" id="vacsora" name="vacsora" value="i" checked><label for="vacsora">Vacsora</label>
+                <input type="checkbox" id="wellness" name="wellness" value="i"><label for="wellness">Wellnes részleg</label>
+                <input type="checkbox" id="kondi" name="kondi" value="i"><label for="kondi">Konditerem</label>
+                <input type="checkbox" id="tura" name="tura" value="i"><label for="tura">Túra a Hortobágyon</label>
+                <input type="submit" id="mybutton" value="Foglalok!" onclick="foglalas()">
+                <input type="reset" value="Kitöltöm újra!">
+            </form>
+        </article>
+    </div>
+    <footer>
+        <img src="style/kepek/social_media.png" alt="Social media logók" id="social_kapcs">
+    </footer>
+</body>
+</html>

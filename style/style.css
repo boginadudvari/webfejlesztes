@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box; 
+    font-family: 'Merriweather', serif;
+ }
+ 
+ body {
+     background-color: #C8AE8D;
+     padding: 0px;
+     margin: 0px;
+ }
+ 
+ header{
+    text-align: center;
+ }
+
+ #logo{
+   width: 25%;
+ }
+ nav{
+   display: flex;
+   justify-content: center;
+   padding: 10px;
+  }
+
+ nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+ }
+
+ nav li{
+   padding: 10px 20px;
+   text-align: center;
+
+ }
+
+  nav li a{
+   padding: 5px 15px;
+   color: white;
+   border: 1px solid white;
+   text-align: center;
+   text-decoration: none;
+  }
+
+  .menu:hover{
+   transform: scale(1.5);
+   transition: 0.5s;
+  }
+
+  nav li a#aktiv{
+   color: #C8AE8D;
+   background-color: white;
+  }
+
+  article, aside, form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  }
+
+  .szoba{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  #social{
+    width: 50%;
+  }
+
+  #social_kapcs{
+    width: 10%;
+  }
+
+  article{
+    padding: 15px;
+  }
+
+  .kep, .kep_szoba{
+   width: 60%;
+  }
+
+  #hatter1{
+    display: flex;
+    flex-direction: column;
+    background-image: url(kepek/hatter.png);
+    color: white;
+    align-items: center;
+  }
+
+  #hatter2{
+    display: flex;
+    flex-direction: column;
+    background-image: url(kepek/hatter.png);
+    color: white;
+  }
+
+
+  #standard:hover, #csaladi:hover, #premium:hover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #C8AE8D;
+    color: black;
+  }
+
+  #wellness{
+    background-image: url(kepek/wellness.jpg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+  }
+
+  #kondi{
+    background-image: url(kepek/kondi_panorama.jpg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+  }
+
+  #tura{
+    background-image: url(kepek/hortobagy_panorama.jpg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+  }
+
+  label.error {
+    color: black;
+    font-weight: bold;
+  }
+
+.elmeny{
+  background-color: #C8AE8D;
+}
+
+  @media all and (min-width: 600px) {
+    nav ul{
+      flex-direction: row;
+    }
+
+    #rolunk_resz, #kenyelem_resz{
+      display: flex;
+      flex-direction: row;
+      padding: 50px;
+    }
+
+    #gasztro_resz{
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 50px;
+    }
+
+    article{
+      flex-basis: 60%;
+    }
+
+    .szoba{
+      flex-basis: 40%;
+      justify-content: space-around;
+    }
+
+    aside{
+      flex-basis: 40%;
+      justify-content: center;
+    }
+
+    .kep{
+      width: 80%;
+    }
+
+    .kep_jobb{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .kep_jobb p{
+      flex-basis: 50%;
+    }
+
+    #kep_bal p{
+      flex-basis: 50%;
+    }
+
+    #kep_bal{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    
+    .kep_szoba{
+      width: 100%;
+      padding: 0 30px;
+    }
+
+  }
+
+  @media all and (min-width: 768px) {
+
+    .kep_jobb p{
+      flex-basis: 70%;
+    }
+
+    #kep_bal p{
+      flex-basis: 70%;
+    }
+
+    .kep_szoba{
+      width: 60%;
+      padding: 0 30px;
+    }
+
+    #hatter2{
+      flex-direction: row;
+    }
+
+    #hely_eler{
+      flex-basis: 40%;
+    }
+
+    #foglalas{
+      flex-basis: 60%;
+    }
+
+    #rolunk_egesz{
+      display: flex;
+      flex-direction: column;
+      background-image: url(kepek/hortobagy.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  
+    .resz{
+      background-color: #C8AE8D;
+    }
+  
+    .ures{
+      height: 300px;
+    }
+  }
